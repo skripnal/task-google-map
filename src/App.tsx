@@ -94,11 +94,13 @@ const App: FC = () => {
         }
     }
 
+    console.log(process.env.REACT_APP_FIREBASE_CONFIG)
+
     return (
         <APIProvider apiKey={String(process.env.REACT_APP_GOOGLE_MAPS_API_KEY)}>
             <div style={{ width: '100%', height: '100vh' }}>
                 <Map
-                    // onClick={mapClickHandler}
+                    onClick={mapClickHandler}
                     defaultCenter={{ lat: 53.54992, lng: 10.00678 }}
                     defaultZoom={3}
                     mapId={'4504f8b37365c3d0'}
